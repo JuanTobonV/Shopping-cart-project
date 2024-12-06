@@ -1,12 +1,11 @@
 import Header from "./components/Header"
 import Guitar from "./components/Guitar"
-import { useCart } from "./hooks/useCart"
+import { useCart } from "./hooks/useCart.ts"
 
 
 function App() {
 
   const {data, cart,addToCart,removeFromCart,increaseQuantity,decreaseQuantity,clearCart, isEmpty, cartTotal } = useCart()
-
 
 
   return (

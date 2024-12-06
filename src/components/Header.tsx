@@ -1,4 +1,17 @@
-function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal}){
+
+import { Guitar, CartItem } from "../types/types"
+
+type Headerprops = {
+    cart:CartItem[]
+    removeFromCart: (id: Guitar["id"]) => void
+    increaseQuantity: (id: Guitar["id"]) => void
+    decreaseQuantity: (id: Guitar["id"]) => void
+    clearCart: () => void
+    isEmpty:boolean
+    cartTotal:number
+}
+
+function Header({cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal}:Headerprops){
 
     return(
         <>
